@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+@import "utilities/variables";
+
+@import "utilities/grid";
+
+@import "utilities/mobile";
+
+
+/*Encabezado*/
+header {
+    background-color: $color-principal;
+
+    nav {
+        ul {
+            display: flex;
+            justify-content: flex-end;
+            list-style: none;
+
+            li {
+                background-color: lightblue;
+                font-size: 1rem;
+                color: black;
+                margin: 10px;
+                padding: 5px;
+                border-radius: 50px;
+                box-shadow: 3px 3px black;
+
+                &:hover {
+                    background-color: rgb(179, 176, 176);
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+
+    .etiq {
+        margin: 5px;
+        font-size: 1rem;
+    }
+}
+
+
+/*Contenido de la página*/
+main {
+    background-color: $color-main;
+
+    h1 {
+        color: rgb(3, 3, 116);
+        display: flex;
+        justify-content: center;
+        padding-top: 15px;
+    }
+
+    h2 {
+        display: flex;
+        justify-content: center;
+        padding: 50px;
+    }
+
+    p{ 
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
+section, .section1 {
+    background-color: $color-section;
+
+    h3 {
+        padding: 20px;
+        display: flex;
+        justify-content: center;
+        color:rgb(87, 10, 87);
+    }
+
+    p {
+        margin: 5px;
+        padding: 5px;
+        display: flex;
+        justify-content: center;
+    }
+
+    .map, .img {
+        display: flex;
+        justify-content: center;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    ul, ol{
+        margin: 5px;
+        padding: 5px;
+        li {
+            margin: 15px;
+        }
+    }
+
+    .imgAyuda, .imgEnvio {
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+        animation-name: mov;
+        animation-iteration-count: infinite;
+        animation-duration: 5s;
+    }
+
+    @keyframes mov {
+        from {
+            transform: scale(1.0);
+        }
+    
+        to {
+            transform: scale(1.1);
+        }
+    }
+}
+
+
+/*Pie de página*/
+footer {
+    background-color: $color-principal;
+
+    .foot {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px;
+
+        h4 {
+            margin: 5px;
+            padding: 5px;
+        }
+
+        p {
+            margin: 5px;
+            font-size: 1rem;
+        }
+
+        .redes {
+            display: flex;
+            justify-content: center;
+
+            .bi-facebook,
+            .bi-instagram,
+            .bi-whatsapp {
+                font-size: 30px;
+                text-align: center;
+                margin-left: 10px;
+                margin-right: 10px;
+                color: rgb(3, 3, 116);
+
+                &:hover {
+                    color: rgb(87, 10, 87);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,152 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif; }
+
+/*Prop. de GRID Index- Nosotros- Carrito*/
+.contenedor-grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.5fr 1.2fr 0.5fr;
+  grid-template-areas: "header header header header" "main main main main"  "section section section1 section1"                  "footer footer footer footer"; }
+
+/*Prop. de GRID Productos- Contacto*/
+.contenedor-grid2 {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1.2fr 1.5fr 0.5fr;
+  grid-template-areas: "header header header header" "main main main main"  "section section section section"                  "footer footer footer footer"; }
+
+header {
+  grid-area: header; }
+
+main {
+  grid-area: main; }
+
+section {
+  grid-area: section; }
+
+.section1 {
+  grid-area: section1; }
+
+footer {
+  grid-area: footer; }
+
+/*Formato Mobile*/
+@media only screen and (max-width: 768px) {
+  /*Prop. de GRID Index- Nosotros- Carrito*/
+  .contenedor-grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+    grid-template-areas: "header header header" "main main main"  "section section section"  "section1 section1 section1"                "footer footer footer"; }
+  h1, h2, h3, h4 {
+    font-size: 1rem; } }
+
+/*Encabezado*/
+header {
+  background-color: rgba(207, 203, 203, 0.699); }
+  header nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none; }
+    header nav ul li {
+      background-color: lightblue;
+      font-size: 1rem;
+      color: black;
+      margin: 10px;
+      padding: 5px;
+      border-radius: 50px;
+      box-shadow: 3px 3px black; }
+      header nav ul li:hover {
+        background-color: #b3b0b0;
+        transform: scale(1.2); }
+  header .etiq {
+    margin: 5px;
+    font-size: 1rem; }
+
+/*Contenido de la página*/
+main {
+  background-color: #fdd9ad; }
+  main h1 {
+    color: #030374;
+    display: flex;
+    justify-content: center;
+    padding-top: 15px; }
+  main h2 {
+    display: flex;
+    justify-content: center;
+    padding: 50px; }
+  main p {
+    margin: 5px;
+    padding: 5px; }
+
+section, .section1 {
+  background-color: #d0f1fc; }
+  section h3, .section1 h3 {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    color: #570a57; }
+  section p, .section1 p {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center; }
+  section .map, section .img, .section1 .map, .section1 .img {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    padding: 5px; }
+  section ul, section ol, .section1 ul, .section1 ol {
+    margin: 5px;
+    padding: 5px; }
+    section ul li, section ol li, .section1 ul li, .section1 ol li {
+      margin: 15px; }
+  section .imgAyuda, section .imgEnvio, .section1 .imgAyuda, .section1 .imgEnvio {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    animation-name: mov;
+    animation-iteration-count: infinite;
+    animation-duration: 5s; }
+
+@keyframes mov {
+  from {
+    transform: scale(1); }
+  to {
+    transform: scale(1.1); } }
+
+/*Pie de página*/
+footer {
+  background-color: rgba(207, 203, 203, 0.699); }
+  footer .foot {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px; }
+    footer .foot h4 {
+      margin: 5px;
+      padding: 5px; }
+    footer .foot p {
+      margin: 5px;
+      font-size: 1rem; }
+    footer .foot .redes {
+      display: flex;
+      justify-content: center; }
+      footer .foot .redes .bi-facebook,
+      footer .foot .redes .bi-instagram,
+      footer .foot .redes .bi-whatsapp {
+        font-size: 30px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #030374; }
+        footer .foot .redes .bi-facebook:hover,
+        footer .foot .redes .bi-instagram:hover,
+        footer .foot .redes .bi-whatsapp:hover {
+          color: #570a57; }
