@@ -6,10 +6,8 @@
 }
 
 @import "utilities/variables";
-
 @import "utilities/grid";
-
-@import "utilities/mobile";
+@import "utilities/mediaquery";
 
 
 /*Encabezado*/
@@ -24,16 +22,15 @@ header {
 
             li {
                 background-color: lightblue;
-                font-size: 1rem;
+                font-size: $letra;
                 color: black;
                 margin: 10px;
                 padding: 5px;
-                border-radius: 50px;
-                box-shadow: 3px 3px black;
+                @extend %borde;
 
                 &:hover {
-                    background-color: rgb(179, 176, 176);
-                    transform: scale(1.2);
+                    background-color: map-get($map: $hover, $key: color-hover);
+                    transform: map-get($map: $hover, $key: transf-hover);
                 }
             }
         }
@@ -41,7 +38,7 @@ header {
 
     .etiq {
         margin: 5px;
-        font-size: 1rem;
+        font-size: $letra - 0.3;
     }
 }
 
@@ -52,58 +49,49 @@ main {
 
     h1 {
         color: rgb(3, 3, 116);
-        display: flex;
-        justify-content: center;
+        @include flex;
         padding-top: 15px;
     }
 
     h2 {
-        display: flex;
-        justify-content: center;
+        @include flex;
         padding: 50px;
     }
 
-    p{ 
-        margin: 5px;
-        padding: 5px;
+    p {
+        @include size (5px, 5px);
     }
 }
 
-section, .section1 {
+section,
+.section1 {
     background-color: $color-section;
 
     h3 {
         padding: 20px;
-        display: flex;
-        justify-content: center;
-        color:rgb(87, 10, 87);
+        @include flex;
+        color: rgb(87, 10, 87);
     }
 
-    p {
-        margin: 5px;
-        padding: 5px;
-        display: flex;
-        justify-content: center;
+    p,
+    .map,
+    .img {
+        @include size (5px, 5px);
+        @include flex;
     }
 
-    .map, .img {
-        display: flex;
-        justify-content: center;
-        margin: 5px;
-        padding: 5px;
-    }
+    ul,
+    ol {
+        @include size (5px, 5px);
 
-    ul, ol{
-        margin: 5px;
-        padding: 5px;
         li {
             margin: 15px;
         }
     }
 
-    .imgAyuda, .imgEnvio {
-        display: flex;
-        justify-content: center;
+    .imgAyuda,
+    .imgEnvio {
+        @include flex;
         padding: 20px;
         animation-name: mov;
         animation-iteration-count: infinite;
@@ -114,7 +102,7 @@ section, .section1 {
         from {
             transform: scale(1.0);
         }
-    
+
         to {
             transform: scale(1.1);
         }
@@ -132,18 +120,16 @@ footer {
         margin: 10px;
 
         h4 {
-            margin: 5px;
-            padding: 5px;
+            @include size (5px, 5px);
         }
 
         p {
             margin: 5px;
-            font-size: 1rem;
+            font-size: $letra - 0.3;
         }
 
         .redes {
-            display: flex;
-            justify-content: center;
+            @include flex;
 
             .bi-facebook,
             .bi-instagram,
@@ -155,7 +141,7 @@ footer {
                 color: rgb(3, 3, 116);
 
                 &:hover {
-                    color: rgb(87, 10, 87);
+                    color: map-get($map: $hover1, $key: color-hover);
                 }
             }
         }

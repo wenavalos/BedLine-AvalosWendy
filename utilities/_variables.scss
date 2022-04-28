@@ -1,4 +1,32 @@
+//Variables
 $color-principal:rgba(207, 203, 203, 0.699);
 $color-main:rgb(253, 217, 173);
 $color-section: rgb(208, 241, 252);
 $letra: 1rem;
+
+//Mixin - con parametros
+@mixin size ($margin, $padding) {
+    margin: $margin;
+    padding: $padding;
+}
+
+//Mixin - sin parametros
+@mixin flex {
+    display: flex;
+    justify-content: center;
+}
+
+//Mapas
+$hover:(color-hover: rgb(179, 176, 176),
+    transf-hover: scale(1.2),
+);
+
+$hover1:(color-hover: rgb(87, 10, 87),
+    transf-hover: none,
+);
+
+//Extends
+%borde{
+    border-radius: 50px;
+    box-shadow: 3px 3px black;
+}
