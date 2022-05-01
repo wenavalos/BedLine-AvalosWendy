@@ -5,7 +5,7 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif; }
 
-header nav ul li {
+header .navbar ul li {
   border-radius: 50px;
   box-shadow: 3px 3px black; }
 
@@ -59,19 +59,15 @@ footer {
 /*Encabezado*/
 header {
   background-color: rgba(207, 203, 203, 0.699); }
-  header nav ul {
-    display: flex;
-    justify-content: flex-end;
-    list-style: none; }
-    header nav ul li {
-      background-color: lightblue;
-      font-size: 1rem;
-      color: black;
-      margin: 10px;
-      padding: 5px; }
-      header nav ul li:hover {
-        background-color: #b3b0b0;
-        transform: scale(1.2); }
+  header .navbar ul li {
+    background-color: lightblue;
+    font-size: 1rem;
+    color: black;
+    margin: 10px;
+    padding: 5px; }
+    header .navbar ul li:hover {
+      background-color: #b3b0b0;
+      transform: scale(1.2); }
   header .etiq {
     margin: 5px;
     font-size: 0.7rem; }
@@ -83,18 +79,23 @@ main {
     color: #030374;
     display: flex;
     justify-content: center;
-    padding-top: 15px; }
+    padding-top: 20px; }
   main h2 {
     display: flex;
     justify-content: center;
     padding: 50px; }
   main p {
     margin: 5px;
-    padding: 5px; }
+    padding: 5px;
+    font-size: 1rem; }
 
 section,
 .section1 {
   background-color: #d0f1fc; }
+  section .formulario,
+  .section1 .formulario {
+    font-size: 1rem;
+    padding: 10px; }
   section h3,
   .section1 h3 {
     padding: 20px;
@@ -147,18 +148,19 @@ footer {
     justify-content: space-between;
     margin: 10px; }
     footer .foot h4 {
-      margin: 5px;
-      padding: 5px; }
+      font-size: 1rem; }
     footer .foot p {
       margin: 5px;
       font-size: 0.7rem; }
+    footer .foot ul {
+      font-size: 0.8rem; }
     footer .foot .redes {
       display: flex;
       justify-content: center; }
       footer .foot .redes .bi-facebook,
       footer .foot .redes .bi-instagram,
       footer .foot .redes .bi-whatsapp {
-        font-size: 30px;
+        font-size: 25px;
         text-align: center;
         margin-left: 10px;
         margin-right: 10px;

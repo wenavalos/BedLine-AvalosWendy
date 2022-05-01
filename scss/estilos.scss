@@ -14,12 +14,8 @@
 header {
     background-color: $color-principal;
 
-    nav {
+    .navbar{
         ul {
-            display: flex;
-            justify-content: flex-end;
-            list-style: none;
-
             li {
                 background-color: lightblue;
                 font-size: $letra;
@@ -50,7 +46,7 @@ main {
     h1 {
         color: rgb(3, 3, 116);
         @include flex;
-        padding-top: 15px;
+        padding-top:20px;
     }
 
     h2 {
@@ -60,12 +56,18 @@ main {
 
     p {
         @include size (5px, 5px);
+        font-size: $letra;
     }
 }
 
 section,
 .section1 {
     background-color: $color-section;
+
+    .formulario{
+        font-size:$letra;
+        padding: 10px;
+    }
 
     h3 {
         padding: 20px;
@@ -120,12 +122,16 @@ footer {
         margin: 10px;
 
         h4 {
-            @include size (5px, 5px);
+            font-size: $letra;
         }
 
         p {
             margin: 5px;
             font-size: $letra - 0.3;
+        }
+
+        ul{
+            font-size: 0.8rem;
         }
 
         .redes {
@@ -134,7 +140,7 @@ footer {
             .bi-facebook,
             .bi-instagram,
             .bi-whatsapp {
-                font-size: 30px;
+                font-size: 25px;
                 text-align: center;
                 margin-left: 10px;
                 margin-right: 10px;

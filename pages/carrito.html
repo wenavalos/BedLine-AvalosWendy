@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--link Boostrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!--link fuente-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,20 +32,37 @@
 
         <!--encabezado-->
         <header>
-            <nav>
-                <ul>
-                    <li> <b><a href="../index.html">Home</a></li></b>
-                    <li> <b><a href="nosotros.html">Nosotros</a></li></b>
-                    <li> <b><a href="productos.html">Productos</a></li></b>
-                    <li> <b><a href="contacto.html">Contacto</a></li></b>
-                    <li> <b><a href="carrito.html">Carrito</a></li></b>
-                </ul>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="../index.html">
+                        <img src="../img/logo.png" alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="nosotros.html">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="productos.html">Productos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="contacto.html">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="carrito.html">Carrito</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </nav>
             <div class="etiq">
                 <a href="#irFooter">Ir al Footer</a>
             </div>
         </header>
-
 
         <!--contenido de la pagina-->
         <main id="irInicio">
@@ -83,11 +103,12 @@
             <div class="foot">
                 <div>
                     <h4>Todos los derechos reservados</h4>
+                    <p><b><a href="http://www.linkedin.com/in/avaloswendy" target="_blank">Avalos Wendy</a></b></p>
                     <p> <a href="#irInicio">Ir al Inicio</a></p>
                 </div>
 
                 <div>
-                    <h4>ENCONTRANOS EN LAS REDES SOCIALES</h4>
+                    <h4>Encontranos en las redes sociales</h4>
                     <div class="redes">
                         <a href="http://www.facebook.com/" target="_blank"><i class="bi bi-facebook"></i></a>
                         <a href="http://www.instagram.com/" target="_blank"><i class="bi bi-instagram"></i></a>
@@ -95,7 +116,7 @@
                 </div>
 
                 <div>
-                    <h4>MEDIOS DE PAGO</h4>
+                    <h4>Medios de pago</h4>
                     <ul><b>
                             <li> Efectivo </li>
                             <li> Transferencia </li>
@@ -105,7 +126,7 @@
                 </div>
 
                 <div>
-                    <h4>COMUNICATE CON NOSOTROS</h4>
+                    <h4>Comunicate con nosotros</h4>
                     <div class="redes">
                         <a href="http://wa.me/541164092647" target="_blank"><i class="bi bi-whatsapp"></i></a>
                     </div>
@@ -113,12 +134,11 @@
             </div>
         </footer>
 
-
-
-
-
-
     </div>
+    <!--link js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
 
 </body>
 
