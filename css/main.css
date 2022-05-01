@@ -5,8 +5,10 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif; }
 
-header .navbar ul li {
-  border-radius: 50px;
+header nav ul li, section .btn-enviar,
+.section1 .btn-enviar, section .btn-borrar,
+.section1 .btn-borrar {
+  border-radius: 30px;
   box-shadow: 3px 3px black; }
 
 /*Prop. de GRID Index- Nosotros- Carrito*/
@@ -59,15 +61,20 @@ footer {
 /*Encabezado*/
 header {
   background-color: rgba(207, 203, 203, 0.699); }
-  header .navbar ul li {
+  header nav ul li {
     background-color: lightblue;
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: black;
     margin: 10px;
     padding: 5px; }
-    header .navbar ul li:hover {
+    header nav ul li:hover {
       background-color: #b3b0b0;
-      transform: scale(1.2); }
+      transform: scale(1.1); }
+  header nav .navbar-brand {
+    margin: 10px;
+    padding: 5px; }
+    header nav .navbar-brand:hover {
+      transform: scale(1.1); }
   header .etiq {
     margin: 5px;
     font-size: 0.7rem; }
@@ -96,6 +103,29 @@ section,
   .section1 .formulario {
     font-size: 1rem;
     padding: 10px; }
+  section .estilos-card,
+  .section1 .estilos-card {
+    margin: 1rem; }
+  section .estilos-btn,
+  .section1 .estilos-btn {
+    background-color: #9595eb;
+    border-radius: 20px;
+    box-shadow: 3px 3px black;
+    margin-top: 5px;
+    font-weight: bold; }
+    section .estilos-btn:hover,
+    .section1 .estilos-btn:hover {
+      transform: scale(1.1); }
+  section .btn-enviar,
+  .section1 .btn-enviar {
+    background-color: green;
+    color: white;
+    font-weight: bold; }
+  section .btn-borrar,
+  .section1 .btn-borrar {
+    background-color: red;
+    color: white;
+    font-weight: bold; }
   section h3,
   .section1 h3 {
     padding: 20px;

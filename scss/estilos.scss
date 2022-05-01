@@ -14,20 +14,29 @@
 header {
     background-color: $color-principal;
 
-    .navbar{
+    nav {
         ul {
             li {
                 background-color: lightblue;
-                font-size: $letra;
+                font-size: 0.9rem;
                 color: black;
                 margin: 10px;
                 padding: 5px;
                 @extend %borde;
 
                 &:hover {
-                    background-color: map-get($map: $hover, $key: color-hover);
-                    transform: map-get($map: $hover, $key: transf-hover);
+                    background-color: rgb(179, 176, 176);
+                    transform: scale(1.1);
                 }
+            }
+        }
+
+        .navbar-brand {
+            margin: 10px;
+            padding: 5px;
+
+            &:hover {
+                transform: scale(1.1);
             }
         }
     }
@@ -46,7 +55,7 @@ main {
     h1 {
         color: rgb(3, 3, 116);
         @include flex;
-        padding-top:20px;
+        padding-top: 20px;
     }
 
     h2 {
@@ -64,9 +73,37 @@ section,
 .section1 {
     background-color: $color-section;
 
-    .formulario{
-        font-size:$letra;
+    .formulario {
+        font-size: $letra;
         padding: 10px;
+    }
+
+    .estilos-card {
+        margin: 1rem;
+    }
+
+    .estilos-btn {
+        @include condicion(rgb(149, 149, 235));
+        margin-top: 5px;
+        font-weight: bold;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    .btn-enviar {
+        background-color: map-get($map: $enviar, $key: bg-enviar);
+        color: map-get($map: $enviar, $key: color-enviar);
+        font-weight: map-get($map: $enviar, $key: font-enviar);
+        @extend %borde;
+    }
+
+    .btn-borrar {
+        background-color: map-get($map: $borrar, $key: bg-borrar);
+        color: map-get($map: $borrar, $key: color-borrar);
+        font-weight: map-get($map: $borrar, $key: font-borrar);
+        @extend %borde;
     }
 
     h3 {
@@ -130,7 +167,7 @@ footer {
             font-size: $letra - 0.3;
         }
 
-        ul{
+        ul {
             font-size: 0.8rem;
         }
 
@@ -147,7 +184,7 @@ footer {
                 color: rgb(3, 3, 116);
 
                 &:hover {
-                    color: map-get($map: $hover1, $key: color-hover);
+                    color: rgb(87, 10, 87);
                 }
             }
         }

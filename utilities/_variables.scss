@@ -17,16 +17,34 @@ $letra: 1rem;
 }
 
 //Mapas
-$hover:(color-hover: rgb(179, 176, 176),
-    transf-hover: scale(1.2),
+$enviar:(color-enviar: white,
+    bg-enviar: green,
+    font-enviar: bold,
 );
 
-$hover1:(color-hover: rgb(87, 10, 87),
-    transf-hover: none,
+$borrar:(color-borrar: white,
+    bg-borrar: red,
+    font-borrar: bold,
 );
 
 //Extends
-%borde{
-    border-radius: 50px;
+%borde {
+    border-radius: 30px;
     box-shadow: 3px 3px black;
+}
+
+//Condicionales
+@mixin condicion ($boton) {
+    background-color: $boton;
+
+    //condicional
+    @if $boton==rgb(149, 149, 235) {
+        border-radius: 20px;
+        box-shadow: 3px 3px black;
+    }
+
+    @else {
+        border-radius: 30px;
+        box-shadow: none;
+    }
 }
