@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif; }
 
+body {
+  overflow-x: hidden; }
+
 header nav ul li, section .btn-enviar,
 .section1 .btn-enviar, section .btn-borrar,
 .section1 .btn-borrar {
@@ -51,12 +54,37 @@ footer {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
     grid-template-areas: "header header header" "main main main" "section section section" "section1 section1 section1" "footer footer footer"; }
+  /*Prop. de GRID Productos- Contacto */
+  .contenedor-grid2 {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.2fr 1.5fr 0.5fr;
+    grid-template-areas: "header header header" "main main main" "section section section" "footer footer footer"; }
   h1,
   h2,
   h3 {
     font-size: 1rem; }
+  section .formulario,
+  .section1 .formulario {
+    font-size: 0.3rem;
+    padding: 10px; }
+  section p,
+  .section1 p {
+    font-size: 0.8rem; }
+  section ul li,
+  section ol li,
+  .section1 ul li,
+  .section1 ol li {
+    font-size: 0.5rem; }
   footer {
-    font-size: 0.5rem; } }
+    font-size: 0.5rem; }
+    footer .foot h4 {
+      font-size: 1rem; }
+    footer .foot .redes .bi-facebook,
+    footer .foot .redes .bi-instagram,
+    footer .foot .redes .bi-whatsapp {
+      font-size: 10px; } }
 
 /*Encabezado*/
 header {
@@ -152,7 +180,8 @@ section,
     section ol li,
     .section1 ul li,
     .section1 ol li {
-      margin: 15px; }
+      margin: 15px;
+      font-size: 1rem; }
   section .imgAyuda,
   section .imgEnvio,
   .section1 .imgAyuda,

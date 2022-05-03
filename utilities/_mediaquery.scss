@@ -16,14 +16,66 @@
             "footer footer footer";
     }
 
+    /*Prop. de GRID Productos- Contacto */
+    .contenedor-grid2 {
+        height: 100vh;
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1.2fr 1.5fr 0.5fr;
+
+        grid-template-areas: "header header header"
+            "main main main"
+            "section section section"
+            "footer footer footer";
+    }
+
     h1,
     h2,
     h3 {
         font-size: $letra;
     }
 
-    footer {
-        font-size: $letra - 0.5;
+    section,
+    .section1 {
+
+        .formulario {
+            font-size: 0.3rem;
+            padding: 10px;
+        }
+
+
+        p {
+            font-size: 0.8rem;
+        }
+
+        ul,
+        ol {
+            li {
+                font-size: 0.5rem;
+            }
+        }
+
     }
 
+    footer {
+        font-size: $letra - 0.5;
+
+        .foot {
+            h4 {
+                font-size: $letra;
+            }
+
+            .redes {
+
+                .bi-facebook,
+                .bi-instagram,
+                .bi-whatsapp {
+                    font-size: 10px;
+                }
+            }
+        }
+    }
 }
+
+
