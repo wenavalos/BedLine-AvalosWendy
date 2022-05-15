@@ -46,7 +46,7 @@ footer {
   grid-area: footer; }
 
 /*Formato Mobile*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 600px) {
   /*Prop. de GRID Index- Nosotros- Carrito*/
   .contenedor-grid {
     height: 100vh;
@@ -73,18 +73,84 @@ footer {
   .section1 p {
     font-size: 0.8rem; }
   section ul li,
+  .section1 ul li {
+    font-size: 0.5rem; }
+  section ol li,
+  .section1 ol li {
+    font-size: 0.5rem; }
+  footer .foot {
+    display: flex;
+    justify-content: space-between; }
+    footer .foot h4 {
+      font-size: 0.5rem; }
+    footer .foot .redes {
+      display: flex;
+      justify-content: center; }
+      footer .foot .redes .bi-facebook,
+      footer .foot .redes .bi-instagram,
+      footer .foot .redes .bi-whatsapp {
+        font-size: 5px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #030374; }
+        footer .foot .redes .bi-facebook:hover,
+        footer .foot .redes .bi-instagram:hover,
+        footer .foot .redes .bi-whatsapp:hover {
+          color: #570a57; } }
+
+/*Formato Tablet*/
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  /*Prop. de GRID Index- Nosotros- Carrito*/
+  .contenedor-grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.2fr 1.5fr 0.5fr;
+    grid-template-areas: "header header header header" "main main main main" "section section section1 section1" "footer footer footer footer"; }
+  /*Prop. de GRID Productos- Contacto*/
+  .contenedor-grid2 {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 1.2fr 1.5fr 0.5fr;
+    grid-template-areas: "header header header header" "main main main main" "section section section section" "footer footer footer footer"; }
+  h1,
+  h2,
+  h3 {
+    font-size: 1rem; }
+  section .formulario,
+  .section1 .formulario {
+    font-size: 0.3rem;
+    padding: 10px; }
+  section p,
+  .section1 p {
+    font-size: 0.8rem; }
+  section ul li,
   section ol li,
   .section1 ul li,
   .section1 ol li {
     font-size: 0.5rem; }
-  footer {
-    font-size: 0.5rem; }
+  footer .foot {
+    display: flex;
+    justify-content: space-between; }
     footer .foot h4 {
-      font-size: 1rem; }
-    footer .foot .redes .bi-facebook,
-    footer .foot .redes .bi-instagram,
-    footer .foot .redes .bi-whatsapp {
-      font-size: 10px; } }
+      font-size: 0.5rem; }
+    footer .foot .redes {
+      display: flex;
+      justify-content: center; }
+      footer .foot .redes .bi-facebook,
+      footer .foot .redes .bi-instagram,
+      footer .foot .redes .bi-whatsapp {
+        font-size: 5px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        color: #030374; }
+        footer .foot .redes .bi-facebook:hover,
+        footer .foot .redes .bi-instagram:hover,
+        footer .foot .redes .bi-whatsapp:hover {
+          color: #570a57; } }
 
 /*Encabezado*/
 header {
@@ -105,7 +171,9 @@ header {
       transform: scale(1.1); }
   header .etiq {
     margin: 5px;
-    font-size: 0.7rem; }
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: black; }
 
 /*Contenido de la página*/
 main {
@@ -208,7 +276,9 @@ footer {
     margin: 10px; }
     footer .foot h4 {
       font-size: 1rem; }
-    footer .foot p {
+    footer .foot .f1 p {
+      text-decoration: none;
+      color: black;
       margin: 5px;
       font-size: 0.7rem; }
     footer .foot ul {

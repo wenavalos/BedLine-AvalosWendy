@@ -1,5 +1,5 @@
 /*Formato Mobile*/
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:600px) {
 
     /*Prop. de GRID Index- Nosotros- Carrito*/
     .contenedor-grid {
@@ -49,6 +49,102 @@
             font-size: 0.8rem;
         }
 
+        ul {
+            li {
+                font-size: 0.5rem;
+            }
+        }
+
+        ol {
+            li {
+                font-size: 0.5rem;
+            }
+        }
+
+    }
+
+    footer {
+        .foot {
+            display: flex;
+            justify-content: space-between;
+
+            h4 {
+                font-size: 0.5rem;
+            }
+
+            .redes {
+                @include flex;
+
+                .bi-facebook,
+                .bi-instagram,
+                .bi-whatsapp {
+                    font-size: 5px;
+                    text-align: center;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    color: rgb(3, 3, 116);
+
+                    &:hover {
+                        color: rgb(87, 10, 87);
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+/*Formato Tablet*/
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+
+    /*Prop. de GRID Index- Nosotros- Carrito*/
+    .contenedor-grid {
+        height: 100vh;
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1.2fr 1.5fr 0.5fr;
+
+        grid-template-areas: "header header header header"
+            "main main main main"
+            "section section section1 section1"
+            "footer footer footer footer";
+    }
+
+    /*Prop. de GRID Productos- Contacto*/
+    .contenedor-grid2 {
+        height: 100vh;
+        display: grid;
+
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 0.5fr 1.2fr 1.5fr 0.5fr;
+
+        grid-template-areas: "header header header header"
+            "main main main main"
+            "section section section section"
+            "footer footer footer footer";
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-size: $letra;
+    }
+
+    section,
+    .section1 {
+
+        .formulario {
+            font-size: 0.3rem;
+            padding: 10px;
+        }
+
+
+        p {
+            font-size: 0.8rem;
+        }
+
         ul,
         ol {
             li {
@@ -59,23 +155,31 @@
     }
 
     footer {
-        font-size: $letra - 0.5;
-
         .foot {
+            display: flex;
+            justify-content: space-between;
+
             h4 {
-                font-size: $letra;
+                font-size: 0.5rem;
             }
 
             .redes {
+                @include flex;
 
                 .bi-facebook,
                 .bi-instagram,
                 .bi-whatsapp {
-                    font-size: 10px;
+                    font-size: 5px;
+                    text-align: center;
+                    margin-left: 10px;
+                    margin-right: 10px;
+                    color: rgb(3, 3, 116);
+
+                    &:hover {
+                        color: rgb(87, 10, 87);
+                    }
                 }
             }
         }
     }
 }
-
-
